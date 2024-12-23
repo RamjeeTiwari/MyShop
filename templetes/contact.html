@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+  <img
+    src="/static/img/30.jpeg"
+    height="400pxl"
+    width="1200pxl"
+    class="d-block w-100"
+    alt="..."
+  />
+  <h2 style="position: absolute; left: 600px; top: 100px"><b>Contact Us</b></h2>
+</div>
+
+<div class="container-fluid px-0">
+    <form action="/contact"style="text-align:center;background-color:grey; " method="POST" >
+      {% csrf_token %}
+  
+      <label for="fname">name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+      <br>
+      <br>
+  
+      <label for="email">email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your Email">
+      <br>
+      <br>
+
+       
+    <label for="Phone">Phone</label>
+      <input type="text" id="Phone" name="Phone" placeholder="Enter your Contact No.">
+
+     <br>
+     <br>
+  
+      <label for="subject">Subject</label>
+      <input type="text" id="Subject" name="Subject" placeholder="Write something.." >
+  <br>
+  <br>
+      <input class="btn btn-primary"type="submit" value="Submit">
+  
+    </form>
+  </div>
+{% endblock body %}
